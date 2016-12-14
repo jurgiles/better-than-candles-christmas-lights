@@ -6,8 +6,6 @@
 CRGB leds[NUM_LEDS];
 
 void setup() { 
-  Serial.begin(9600);
-  
   randomSeed(analogRead(0));
   
   LEDS.addLeds<NEOPIXEL,DATA_PIN>(leds, NUM_LEDS);
@@ -18,7 +16,6 @@ void setup() {
 void loop() 
 {
   int dot = random(0, NUM_LEDS);
-  Serial.println(dot);
   
   dim_dot(dot);
   
