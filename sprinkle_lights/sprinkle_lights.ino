@@ -1,12 +1,12 @@
 #include <FastLED.h>
-#define NUM_LEDS 50
+#define NUM_LEDS 100
 #define NUM_LEAD_DOTS 5
 #define DATA_PIN 6
 
 CRGB leds[NUM_LEDS];
 
 void setup() { 
-  LEDS.addLeds<NEOPIXEL,DATA_PIN>(leds, NUM_LEDS);
+  LEDS.addLeds<WS2812B,DATA_PIN>(leds, NUM_LEDS);
   randomSeed(analogRead(0));
 }
 
